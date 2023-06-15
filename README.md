@@ -1,2 +1,2 @@
-# MasteringEnumeration
-Mastering enumeration in .NET presentation slide deck
+# Mastering Enumeration in .NET
+Presentation slide deck
