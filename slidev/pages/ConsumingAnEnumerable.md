@@ -18,19 +18,7 @@ public static int Sum(IEnumerable<int> enumerable)
 }
 ```
 
----
-
-# `await foreach`
-
-```csharp {all|4}
-public static async ValueTask<int> SumAsync(IAsyncEnumerable<int> enumerable, CancellationToken token = default) 
-{
-  var sum = 0;
-  await foreach(var number in enumerable.WithCancellation(token))
-    sum += number;
-  return sum;
-}
-```
+[SharpLab](https://sharplab.io/#v2:EYLgxg9gTgpgtADwGwBYA+ABATABgLABQ2AjIRjgAQbEoDchhAbgIZQUDOEArlGDBQF4KAOxgB3ANoBdCgG8sAGgpYAvvSLEAnAAoAylwC22zjz4BKM+rLEkFAJbCALhX1HqAZgA8DxwD4KMMKGMFDMwAA2MGYUhLKEFBQsbOyGghQ46gkAZtAwzGAAFhTaSSKGwCH2wgFBBiFhkWbxCRypANRCtRVQmVQA7K0G6ipAA)
 
 ---
 
@@ -59,7 +47,23 @@ Does not check for `null`. `Enumerable&lt;T&gt;` should be used when there's not
 
 ---
 
-# compiled `await foreach`
+# async `foreach`
+
+```csharp {all|4}
+public static async ValueTask<int> SumAsync(IAsyncEnumerable<int> enumerable, CancellationToken token = default) 
+{
+  var sum = 0;
+  await foreach(var number in enumerable.WithCancellation(token))
+    sum += number;
+  return sum;
+}
+```
+
+[SharpLab]()
+
+---
+
+# compiled async `foreach`
 
 ```csharp {all|4|6|7}
 public static async ValueTask<int> SumAsync(IAsyncEnumerable<int> enumerable, CancellationToken token = default)
