@@ -19,10 +19,10 @@ layout: section
 ```csharp
 static int Sum(int[] source)
 {
-    var sum = 0;
-    for (var index = 0; index < source.Length; index++)
-        sum += source[index];
-    return sum;
+  var sum = 0;
+  for (var index = 0; index < source.Length; index++)
+    sum += source[index];
+  return sum;
 }   
 ```
 
@@ -41,6 +41,8 @@ static int Sum(int[] source)
   return sum;
 }   
 ```
+
+[SharpLab](https://sharplab.io/#v2:EYLgxg9gTgpgtADwGwBYA+ABATABgLABQ2AjIRjgAQbEB0AMgJYB2AjgNyGEBuAhlBXyg8AnhQC8FAKJMArgFsYQ4ABsYNAEo8mAcxgAKHABoKxHAEoaAFQgBBKEOF6zHIsQCcegMry9gkWedOVyQKZgAXCm85PXCAbQBdCgBnCBkoMBgzQgBvQgp8il5+JPlxChwXAooAM2gYHjAACwo9ItCwmDlQpmTU9My8qoKSroBqCQYOuUqCjAB2ZPkXAF8CoA)
 
 ---
 
@@ -63,5 +65,17 @@ static int Sum(int[] source)
 # `foreach` compiled
 
 ```csharp
+static int Sum(int[] source)
+{
+  int sum = 0;
+  int index = 0;
+  while (index < source.Length)
+  {
+    int num3 = source[index];
+    sum += num3;
+    index++;
+  }
+  return sum;
+}
 ```
 

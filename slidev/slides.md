@@ -1,7 +1,7 @@
 ---
 highlighter: shiki
 layout: cover
-background: 'https://source.unsplash.com/1600x900/?nature,water'
+background: "https://source.unsplash.com/1600x900/?nature,water"
 ---
 
 # Mastering Enumeration in .NET
@@ -16,25 +16,22 @@ Farfetch
 
 ---
 
-# Enumeration
+# Enumeration loops
 
-- Control
-  - Pull - The consumer controls the pace of enumeration by explicitly requesting elements.
-  - Push - The producer controls the pace of enumeration by actively pushing elements.
-- Order
-  - Sequential - The elements are accessed in a specific order, following a predetermined sequence.
-  - Random - The elements are accessed in a non-sequential or arbitrary order, without a predetermined sequence.
+-   While
+-   For
+-   ForEach
+
+---
+src: ./pages/For.md
+---
+
+---
+src: ./pages/ForEach.md
+---
 
 ---
 src: ./pages/EnumerableEnumerator.md
----
-
----
-src: ./pages/ProducingAnEnumerable.md
----
-
----
-src: ./pages/ConsumingAnEnumerable.md
 ---
 
 ---
@@ -42,22 +39,17 @@ src: ./pages/LinqTips.md
 ---
 
 ---
-src: ./pages/Queryable.md
----
-
----
-src: ./pages/ArrayMemorySpan.md
----
-
----
-
-src: ./pages/NetFabric.md
----
-
----
 layout: fact
 ---
 
-https://aalmada.github.io/MasteringEnumeration/
+# The End!
+
+---
+
+# References
+
+- https://aalmada.github.io/MasteringEnumeration/
+- https://medium.com/@antao-almada
+- https://www.linkedin.com/in/antaoalmada/recent-activity/articles/
 
 ---
