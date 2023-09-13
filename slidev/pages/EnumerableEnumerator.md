@@ -19,7 +19,7 @@ public interface IEnumerable
 layout: statement
 ---
 
-# IEnumerable is a factory of enumerators!
+## IEnumerable is a factory of enumerators!
 
 Each new enumeration creates a new instance of the enumerator
 
@@ -41,9 +41,9 @@ public interface IEnumerator
 layout: statement
 ---
 
-# IEnumerator abstracts a stream where data can be **pulled** from!
+## IEnumerator abstracts a stream where data can be **pulled** from!
 
-Enumerator keeps the state of the enumeration
+Enumerator is state machine that keeps the state of the enumeration
 
 ---
 
@@ -53,6 +53,14 @@ Enumerator keeps the state of the enumeration
 - Read-only 
 - Sequential
 - **Nothing more!...** 
+
+---
+
+# Generics support
+
+- `MoveNext()` returns `object`
+- Requires casting at runtime
+- Slow
 
 ---
 
@@ -79,6 +87,16 @@ public interface IEnumerator<out T>
 
 # Async support
 
+- If data is not in memory:
+  - Hard drive
+  - Database
+  - Remote location
+- `MoveNext()` call will block execution
+
+---
+
+# Async support
+
 ```csharp {all|1|3|all}
 public interface IAsyncEnumerable<out T>
 { 
@@ -93,5 +111,25 @@ public interface IAsyncEnumerator<out T>
     T Current { get; }
     
     ValueTask<bool> MoveNextAsync();
+}
+```
+
+---
+layout: statement
+---
+
+## Any type that implements `IEnumerable` can be enumerated using `foreach`
+
+---
+
+# ForEach
+
+```csharp
+public static int Sum(IEnumerable<int> source)
+{
+    var sum = 0;
+    foreach (var item in source)
+        sum += item;
+    return sum;
 }
 ```
