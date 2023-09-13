@@ -36,7 +36,7 @@ layout: statement
 ---
 
 # 'ForEach' uses duck typing!
-Generates at compile time different depending on the source type.
+Generates at compile time different code depending on the source type.
 
 ---
 

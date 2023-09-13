@@ -52,7 +52,6 @@ Enumerator is state machine that keeps the state of the enumeration
 - Pull
 - Read-only 
 - Sequential
-- **Nothing more!...** 
 
 ---
 
